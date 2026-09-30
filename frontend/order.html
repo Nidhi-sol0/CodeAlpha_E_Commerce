@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f8fafc">
+    <title>Your order | LumaCart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/app.js" defer></script>
+  </head>
+  <body data-page="order">
+    <a class="skip-link" href="#main-content">Skip to content</a><div id="site-header"></div>
+    <main id="main-content" class="wrap page-main order-page">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="./index.html">Home</a><span aria-hidden="true">/</span><a href="./account.html">My account</a><span aria-hidden="true">/</span><span>Order details</span></nav>
+      <div id="order-loading" class="checkout-loading" role="status"><span class="cart-spinner" aria-hidden="true"></span>Loading your order…</div>
+      <div id="order-error" class="empty-state" role="alert" hidden><span class="empty-mark" aria-hidden="true">!</span><h1>We couldn't find that order.</h1><p>It may not belong to this account, or the link may be incomplete.</p><a class="button button-primary" href="./account.html#orders">View your orders</a></div>
+      <section id="order-content" class="order-content" hidden></section>
+    </main>
+    <div id="site-footer"></div><div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div><dialog id="cart-dialog" class="cart-dialog" aria-labelledby="cart-title"></dialog>
+  </body>
+</html>

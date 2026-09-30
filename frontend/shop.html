@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f8fafc">
+    <title>Shop | LumaCart</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preconnect" href="https://images.unsplash.com"><link rel="stylesheet" href="./css/styles.css"><script src="./js/app.js" defer></script>
+  </head>
+  <body data-page="shop">
+    <a class="skip-link" href="#main-content">Skip to content</a><div id="site-header"></div>
+    <main id="main-content" class="wrap page-main">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="./index.html">Home</a><span aria-hidden="true">/</span><span>Shop</span></nav>
+      <section class="page-heading"><div><p class="eyebrow">THE LUMACART COLLECTION</p><h1>Good things, found here.</h1><p>Everyday essentials, thoughtfully chosen.</p></div><button id="open-filters" class="button button-secondary filter-trigger" type="button" aria-expanded="false" aria-controls="filter-panel"><span aria-hidden="true">☷</span> Filters <span id="active-filter-count" class="filter-count" hidden></span></button></section>
+      <div id="filter-scrim" class="filter-scrim" hidden></div>
+      <div class="shop-layout">
+        <aside id="filter-panel" class="filter-panel" aria-label="Product filters">
+          <div class="filter-panel-head"><h2>Filters</h2><button id="close-filters" class="icon-button" type="button" aria-label="Close filters">×</button></div>
+          <label class="field-label" for="category-filter">Category</label><select id="category-filter" class="form-control"><option value="">All categories</option><option>Electronics</option><option>Fashion</option><option>Home &amp; Living</option><option>Beauty</option><option>Accessories</option><option>Sports</option></select>
+          <fieldset class="filter-group"><legend>Price range</legend><div class="price-fields"><label><span class="sr-only">Minimum price</span><span>$</span><input id="min-price" type="number" min="0" placeholder="Min" inputmode="decimal"></label><span aria-hidden="true">to</span><label><span class="sr-only">Maximum price</span><span>$</span><input id="max-price" type="number" min="0" placeholder="Max" inputmode="decimal"></label></div></fieldset>
+          <fieldset class="filter-group"><legend>Customer rating</legend><label class="check-row"><input type="radio" name="rating" value="" checked><span>Any rating</span></label><label class="check-row"><input type="radio" name="rating" value="4"><span>4 stars &amp; up</span></label><label class="check-row"><input type="radio" name="rating" value="3"><span>3 stars &amp; up</span></label></fieldset>
+          <label class="check-row stock-filter"><input id="stock-filter" type="checkbox"><span>In stock only</span></label><button id="clear-filters" class="text-button" type="button">Clear all filters</button>
+        </aside>
+        <section class="catalog" aria-label="Product results"><div class="catalog-toolbar"><p id="result-count" aria-live="polite">Loading products…</p><label class="sort-control"><span>Sort by</span><select id="sort-products" class="form-control"><option value="featured">Featured</option><option value="newest">Newest</option><option value="price_asc">Price: low to high</option><option value="price_desc">Price: high to low</option><option value="rating">Top rated</option></select></label></div><div id="shop-error" class="error-state" hidden></div><div id="product-grid" class="product-grid" aria-live="polite" aria-busy="true"></div><nav id="pagination" class="pagination" aria-label="Product pages"></nav></section>
+      </div>
+    </main>
+    <div id="site-footer"></div><div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div><dialog id="cart-dialog" class="cart-dialog" aria-labelledby="cart-title"></dialog>
+  </body>
+</html>

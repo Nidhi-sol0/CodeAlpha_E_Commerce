@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f8fafc">
+    <title>Checkout | LumaCart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/app.js" defer></script>
+  </head>
+  <body data-page="checkout">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div id="site-header"></div>
+    <main id="main-content" class="wrap page-main checkout-page">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="./shop.html">Shop</a><span aria-hidden="true">/</span><a href="./cart.html">Bag</a><span aria-hidden="true">/</span><span>Checkout</span></nav>
+      <header class="checkout-heading"><p class="eyebrow">A FEW DETAILS TO GO</p><h1>Checkout</h1><p>Your final total is confirmed securely when the order is placed.</p></header>
+      <div id="checkout-loading" class="checkout-loading" role="status"><span class="cart-spinner" aria-hidden="true"></span>Checking your bag…</div>
+      <div id="checkout-empty" class="empty-state checkout-empty" hidden><span class="empty-mark" aria-hidden="true">▱</span><h2>Your bag is empty.</h2><p>Add something you love before heading to checkout.</p><a class="button button-primary" href="./shop.html">Explore the shop</a></div>
+      <div id="checkout-error" class="form-message" role="alert" hidden></div>
+      <div id="checkout-layout" class="checkout-layout" hidden>
+        <form id="checkout-form" class="checkout-form" novalidate>
+          <section class="checkout-section" aria-labelledby="shipping-title">
+            <div class="checkout-section-heading"><span class="checkout-step">01</span><div><p class="eyebrow">DELIVERY</p><h2 id="shipping-title">Shipping information</h2></div></div>
+            <div class="checkout-fields">
+              <label class="form-field" for="shipping-name"><span>Full name</span><input class="form-control" id="shipping-name" name="name" required minlength="2" maxlength="80" autocomplete="name"></label>
+              <label class="form-field" for="shipping-email"><span>Email address</span><input class="form-control" id="shipping-email" name="email" type="email" required maxlength="254" autocomplete="email"></label>
+              <label class="form-field" for="shipping-phone"><span>Phone number</span><input class="form-control" id="shipping-phone" name="phone" type="tel" required minlength="7" maxlength="30" autocomplete="tel"></label>
+              <label class="form-field checkout-field-wide" for="shipping-line1"><span>Street address</span><input class="form-control" id="shipping-line1" name="line1" required minlength="3" maxlength="120" autocomplete="address-line1"></label>
+              <label class="form-field checkout-field-wide" for="shipping-line2"><span>Apartment, suite, etc. <small>Optional</small></span><input class="form-control" id="shipping-line2" name="line2" maxlength="120" autocomplete="address-line2"></label>
+              <label class="form-field" for="shipping-city"><span>City</span><input class="form-control" id="shipping-city" name="city" required minlength="2" maxlength="80" autocomplete="address-level2"></label>
+              <label class="form-field" for="shipping-region"><span>State / region</span><input class="form-control" id="shipping-region" name="region" required minlength="2" maxlength="80" autocomplete="address-level1"></label>
+              <label class="form-field" for="shipping-postal"><span>Postal code</span><input class="form-control" id="shipping-postal" name="postalCode" required minlength="3" maxlength="20" autocomplete="postal-code"></label>
+              <label class="form-field" for="shipping-country"><span>Country</span><input class="form-control" id="shipping-country" name="country" required minlength="2" maxlength="80" autocomplete="country-name"></label>
+            </div>
+          </section>
+          <section class="checkout-section" aria-labelledby="payment-title">
+            <div class="checkout-section-heading"><span class="checkout-step">02</span><div><p class="eyebrow">DEMO ONLY</p><h2 id="payment-title">Payment method</h2></div></div>
+            <fieldset class="payment-options"><legend class="sr-only">Choose a demo payment method</legend>
+              <label class="payment-option"><input type="radio" name="paymentMethod" value="cod_demo" checked><span class="payment-option-copy"><strong>Cash on Delivery (Demo)</strong><small>Pay when your order arrives. No payment is collected here.</small></span><span class="payment-option-mark" aria-hidden="true">COD</span></label>
+              <label class="payment-option"><input type="radio" name="paymentMethod" value="test_demo"><span class="payment-option-copy"><strong>Test Payment</strong><small>Demo order only. No card details or real payment are processed.</small></span><span class="payment-option-mark" aria-hidden="true">TEST</span></label>
+            </fieldset>
+          </section>
+          <div id="checkout-message" class="form-message" role="alert" hidden></div>
+          <button id="place-order" class="button button-primary place-order-button" type="submit">Place demo order</button>
+          <p class="checkout-security-note">By placing this order, you understand payment is simulated and no real charge will be made.</p>
+        </form>
+        <aside class="checkout-summary" aria-labelledby="summary-title"><div class="checkout-summary-head"><p class="eyebrow">YOUR SELECTION</p><h2 id="summary-title">Order summary</h2></div><div id="checkout-items" class="checkout-items"></div><div id="checkout-totals" class="checkout-totals"></div><a class="checkout-edit-link" href="./shop.html">Continue shopping <span aria-hidden="true">→</span></a></aside>
+      </div>
+    </main>
+    <div id="site-footer"></div><div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div><dialog id="cart-dialog" class="cart-dialog" aria-labelledby="cart-title"></dialog>
+  </body>
+</html>

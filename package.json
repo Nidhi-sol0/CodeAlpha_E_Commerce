@@ -1,0 +1,25 @@
+{
+  "name": "lumacart",
+  "version": "1.0.0",
+  "private": true,
+  "description": "LumaCart e-commerce application foundation",
+  "scripts": {
+    "start": "node backend/src/server.js",
+    "dev": "nodemon backend/src/server.js",
+    "serve:frontend": "node frontend/server.js",
+    "seed": "node backend/src/scripts/seed.js",
+    "check": "node --check backend/src/server.js && node --check backend/src/app.js && node --check backend/src/config/env.js && node --check backend/src/config/database.js && node --check backend/src/models/Product.js && node --check backend/src/models/User.js && node --check backend/src/models/Order.js && node --check backend/src/middleware/asyncHandler.js && node --check backend/src/middleware/auth.js && node --check backend/src/controllers/product.controller.js && node --check backend/src/controllers/auth.controller.js && node --check backend/src/controllers/order.controller.js && node --check backend/src/routes/product.routes.js && node --check backend/src/routes/auth.routes.js && node --check backend/src/routes/order.routes.js && node --check backend/src/data/products.js && node --check backend/src/scripts/seed.js && node --check frontend/js/app.js && node --check frontend/server.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

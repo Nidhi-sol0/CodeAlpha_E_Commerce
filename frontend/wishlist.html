@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f8fafc">
+    <meta name="description" content="Your saved LumaCart favorites, ready when you are.">
+    <title>Your wishlist | LumaCart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/app.js" defer></script>
+  </head>
+  <body data-page="wishlist">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div id="site-header"></div>
+    <main id="main-content" class="wrap page-main wishlist-page">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="./index.html">Home</a><span aria-hidden="true">/</span><span>Wishlist</span></nav>
+      <section class="page-heading wishlist-heading">
+        <div><p class="eyebrow">SAVED FOR LATER</p><h1>Your wishlist</h1><p>A little collection of things you love.</p></div>
+        <a class="button button-secondary" href="./shop.html">Keep exploring</a>
+      </section>
+      <section class="wishlist-section" aria-labelledby="wishlist-results-title">
+        <h2 id="wishlist-results-title" class="sr-only">Saved products</h2>
+        <div id="wishlist-grid" class="product-grid product-grid-4" aria-live="polite" aria-busy="true"></div>
+      </section>
+    </main>
+    <div id="site-footer"></div>
+    <div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+    <dialog id="cart-dialog" class="cart-dialog" aria-labelledby="cart-title"></dialog>
+  </body>
+</html>
